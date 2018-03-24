@@ -1,292 +1,232 @@
 
 <html>
+
 <head>
-<title>LS-align: An atom-level, flexible ligand structural alignment algorithm</title>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>TargetLBS</title>
 
-<!-- ==AAA== ======beginning of head====== -->
+<style>
 <!--
-  When you compose a webpage at the webserver, please have following in mind:
-     1, please keep the following 4 tags unchanged:
-            ==AAA==
-            ==BBB==
-            ==CCC==
-            ==DDD==
-         These tags will be used to update the frame of the webpages.
-     2, the content between '==AAA==' and '==BBB==' and content between 
-        '==CCC==' and '==DDD==' will be mandatorily changed by the system 
-        program. You can put your own contents outside these two regions.
+ li.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
 -->
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="/css/all.css" type="text/css" />
-<script type="text/javascript" src="/css/minmax.js"></script>
-<script type="text/javascript" src="/css/all.js"></script>
+</style>
 </head>
+
 <body>
-<!-- End of declaration -->
 
-<div id="z_top">
-  <a href="/" id="z_lab_logo"><img alt="Zhang Lab" src="/image/logo_top.jpg" /></a>
-  <a href="http://www.umich.edu" id="z_um_logo"><img alt="University of Michigan" src="/image/wordmark_m_web.gif" /></a>
-</div>
-
-<div id="z_menu">
-  <a class="z_menu_main" href="/">Home</a>
-  <a class="z_menu_main" href="/research">Research</a>
-  <a class="z_menu_main" href="/services">Services</a>
-  <a class="z_menu_main" href="/papers">Publications</a>
-  <a class="z_menu_main" href="/people">People</a>
-  <a class="z_menu_main" href="https://medicine.umich.edu/dept/dcmb/graduate-education/course-descriptions/bioinf-528-structural-bioinformatics">Teaching</a>
-  <!-- <a class="z_menu_main" href="/funding">Funding</a> -->
-  <a class="z_menu_main" href="/job">Job Opening</a>
-  <a class="z_menu_main" href="/news">News</a>
-  <a class="z_menu_main" href="https://zhanglab.ccmb.med.umich.edu/bbs/?q=forum/2">Forum</a>
-  <a class="z_menu_main" href="/labonly">Lab Only</a>
-  <div class="z_clear"></div>
-</div>
-
-<div id="z_body">
-  <div id="z_sidebar">
-    <a id="z_sidebar_title" href="/services">Online Services</a>
-    <p class="z_sidebar_menu z_sidebar_menu1">
-      <a href="/I-TASSER">&#9679;<span>I-TASSER</span></a>
-      <a href="/QUARK">&#9679;<span>QUARK</span></a>
-      <a href="/LOMETS">&#9679;<span>LOMETS</span></a>
-      <a href="/COACH">&#9679;<span>COACH</span></a>
-      <a href="/COFACTOR">&#9679;<span>COFACTOR</span></a>
-      <a href="/MetaGO">&#9679;<span>MetaGO</span></a>
-      <a href="/MUSTER">&#9679;<span>MUSTER</span></a>
-      <a href="/SEGMER">&#9679;<span>SEGMER</span></a>
-      <a href="/FG-MD">&#9679;<span>FG-MD</span></a>
-      <a href="/ModRefiner">&#9679;<span>ModRefiner</span></a>
-      <a href="/REMO">&#9679;<span>REMO</span></a>
-      <a href="/spring">&#9679;<span>SPRING</span></a>
-      <a href="/COTH">&#9679;<span>COTH</span></a>
-      <a href="/BSpred">&#9679;<span>BSpred</span></a>
-      <a href="/SVMSEQ">&#9679;<span>SVMSEQ</span></a>
-      <a href="/ANGLOR">&#9679;<span>ANGLOR</span></a>
-      <a href="/BSP-SLIM">&#9679;<span>BSP-SLIM</span></a>
-      <a href="/SAXSTER">&#9679;<span>SAXSTER</span></a>
-      <a href="/ThreaDom">&#9679;<span>ThreaDom</span></a>
-      <a href="/ThreaDomEx">&#9679;<span>ThreaDomEx</span></a>
-      <a href="/EvoDesign">&#9679;<span>EvoDesign</span></a>
-      <a href="/GPCR-I-TASSER">&#9679;<span class="z_narrow">GPCR-I-TASSER</span></a>
-      <a href="/BindProf">&#9679;<span>BindProf</span></a>
-      <a href="/BindProfX">&#9679;<span>BindProfX</span></a>
-      <a href="/ResQ">&#9679;<span>ResQ</span></a>
-      <a href="/IonCom">&#9679;<span>IonCom</span></a>
-      <a href="/STRUM">&#9679;<span>STRUM</span></a>
-    </p>
-    <p class="z_sidebar_menu z_sidebar_menu2">
-      <a href="/TM-score">&#9679;<span>TM-score</span></a>
-      <a href="/TM-align">&#9679;<span>TM-align</span></a>
-      <a href="/MM-align">&#9679;<span>MM-align</span></a>
-      <a href="/NW-align">&#9679;<span>NW-align</span></a>
-      <a href="/LS-align">&#9679;<span>LS-align</span></a>
-      <a href="/EDTSurf">&#9679;<span>EDTSurf</span></a>
-      <a href="/MVP">&#9679;<span>MVP</span></a>
-      <a href="/MVP-Fit">&#9679;<span>MVP-Fit</span></a>
-      <a href="/SPICKER">&#9679;<span>SPICKER</span></a>
-      <a href="/HAAD">&#9679;<span>HAAD</span></a>
-      <a href="/PSSpred">&#9679;<span>PSSpred</span></a>
-      <a href="/3DRobot">&#9679;<span>3DRobot</span></a>
-      <a href="/I-TASSER-MR">&#9679;<span>I-TASSER-MR</span></a>
-      <a href="/NeBcon">&#9679;<span>NeBcon</span></a>
-      <a href="/WDL-RF">&#9679;<span>WDL-RF</span></a>
-      <a href="/ATPbind">&#9679;<span>ATPbind</span></a>
-    </p>
-    <p class="z_sidebar_menu z_sidebar_menu1">
-      <a href="/BioLiP">&#9679;<span>BioLiP</span></a>
-      <a href="/Ecoli">&#9679;<span>E. coli</span></a>
-      <a href="/GLASS">&#9679;<span>GLASS</span></a>
-      <a href="/GPCR-HGmod">&#9679;<span>GPCR-HGmod</span></a>
-      <a href="/GPCR-RD">&#9679;<span>GPCR-RD</span></a>
-      <a href="/GPCR-EXP">&#9679;<span>GPCR-EXP</span></a>
-      <a href="/TM-fold">&#9679;<span>TM-fold</span></a>
-      <a href="/decoys">&#9679;<span>DECOYS</span></a>
-      <a href="/potential">&#9679;<span>POTENTIAL</span></a>
-      <a href="/RW">&#9679;<span>RW</span></a>
-      <a href="/HPSF">&#9679;<span>HPSF</span></a>
-      <a href="/casp7">&#9679;<span>CASP7</span></a>
-      <a href="/casp8">&#9679;<span>CASP8</span></a>
-      <a href="/casp9">&#9679;<span>CASP9</span></a>
-      <a href="/casp10">&#9679;<span>CASP10</span></a>
-      <a href="/casp11">&#9679;<span>CASP11</span></a>
-      <a href="/casp12">&#9679;<span>CASP12</span></a>
-    </p>
-  </div>
-  <div id="z_page">
-<!-- ==BBB== ======ending of head======== -->
-
-
-<!--------begin text ----------->
+<div align="center">
 
 <center>
 <img src="http://zhanglab.ccmb.med.umich.edu/LS-align/logo/LSalign_Logo.png" border="0" width=600>
 </center>
-<p>
-<div align="justify" style="font-family:Times New Roman; font-size:15px">
-<br>
-LS-align is an algorithm designed for atom-level structural comparison of ligand molecules.
-The target function of LS-align is a combination of inter-atom distance, atom mass, and chemical
-bond connections; while the final atom-to-atom alignment is generated by maximizing such 
-target function through an enhanced-greedy based, iterative heuristic search algorithm.
-LS-align program contains two modules: <i>Rigid-LS-align</i> for rigid-body ligand structure 
-comparison; and <i>Flexi-LS-align</i> for flixible structure comparison. 
-In particular, the <i>Flexi-LS-align</i> module seeks for optimal alignments of various alternative 
-conformers of the ligand molecules by rotating flexible bond-angles, 
-which allows the consideration of binding-induced conformational changes
-in the ligand structural comparison and alignment.
 
-<!--
-n atom-level ligand structural alignment algorithm. LS-align can fast and accurately align the atoms from two different ligands for the similarity measurement of the ligand pair and virtual screening. LS-align generates the optimal (or close to the optimal) alignment between two ligand structures through iterative search procedure, which is implemented by enhanced greedy search algorithm. To further evaluate the similarity between two ligands, LS-align presents two sub-algorithms, Rigid-LS-align and Flexi-LS-align, to separately achieve the rigid alignment and flexible alignment, and gives a size-independent scoring function to report the similarity score with the statistical significance. Benchmark tests against the compounds for 102 protein targets available in the DUD-E (Database of Useful Decoys: Enhanced) library indicate that LS-align is a robust computational tool align ligand structures and quantify their structural similarity.
--->
-
-<br /> <br />
-[<a href="example_result/index.html" target=_blank><b>View an example of output</b></a>]
-<!--[<a href="LS-align_PPT.pdf" target=_blank><b>Download/view the LS-align slides</b></a>]-->
-[<a href="Database.html" target=_blank><b>Download dataset used in LS-align</b></a>]
-
-<br />   <br />
-</div>
-
-<table style="font-family:Times New Roman; font-size:15px">
+<table border="0" width="800" id="table1" bgcolor="#FFFFFF">
 	<tr>
-	<td>
-		<FORM id="form1" name="form1" METHOD="POST" ENCTYPE="MULTIPART/FORM-DATA" ACTION="lsalign.cgi">
-			<ul>
-				<li>
-					<!--Input Query Ligand In <a href="http://www.csb.yale.edu/userguides/datamanip/dock/DOCK_4.0.1/html/Manual.41.html" target=_blank>MOL2 format</a> (mandatory):-->
-					Input Query Ligand In <a href="http://paulbourke.net/dataformats/mol2/" target=_blank>MOL2 format</a> (mandatory):
-					<br />
-					Please copy and paste your data below. <a href="javascript:lig1example()">Sample input</a> &nbsp;&nbsp; <!-- <a href="javascript:example1()">Click for an example FASTA input</a> -->
-					<br />
-					<TEXTAREA NAME="FirstMOL2" ROWS=11 COLS=80></TEXTAREA>
-					
-					<p>
-					Or upload the ligand MOL2 file:
-					<br />
-					<input type="file" name="lig1_mol2" size="50">
-					
-					<br />
-					<br />
-				</li>
-				<li>
-					<!-- Input Template Ligand In <a href="http://www.csb.yale.edu/userguides/datamanip/dock/DOCK_4.0.1/html/Manual.41.html" target=_blank>MOL2 format</a> (mandatory):-->
-					Input Template Ligand In <a href="http://paulbourke.net/dataformats/mol2/" target=_blank>MOL2 format</a> (mandatory):
-					<br />
-					Please copy and paste your data below. <a href="javascript:lig2example()">Sample input</a> &nbsp;&nbsp;
-					<br />
-					<TEXTAREA NAME="SecondMOL2" ROWS=11 COLS=80></TEXTAREA>
-					
-					<p>
-					Or upload the ligand MOL2 file:
-					<br />
-					<input type="file" name="lig2_mol2" size="50">
-					<br />
-					<br />
-				</li>
-				<li>
-					Choose alignment type(s) (You can choose both)
-					<br />
-					<input type="checkbox" name="rigid_ali" value="rigid_ali" checked><span>Rigid alignment (Default)</span>
-					&nbsp;&nbsp;
-					<input type="checkbox" name="flexi_ali" value="flexi_ali"><span>Flexible alignment</span>
-					<br />
-					<br />
-				</li>
-				<li>
-					Email: (Optional, where results will be sent to)<br />
-					<input type="text" name="REPLY-E-MAIL" size=30>				
-					<br />
-					<br />
-				</li>
-				<li>
-					<INPUT TYPE="submit" VALUE="Run LS-align"> <INPUT TYPE="reset" VALUE="Clear form">
-				</li>
-				
-			</ul>
-	</FORM>
-	</td>
+		<td width="1178" valign="baseline" colspan="3" bgcolor="#C0C0C0">
+		<font face="Georgia" size="2">
+			LS-align is an algorithm designed for atom-level structural comparison of ligand molecules.
+			The target function of LS-align is a combination of inter-atom distance, atom mass, and chemical
+			bond connections; while the final atom-to-atom alignment is generated by maximizing such 
+			target function through an enhanced-greedy based, iterative heuristic search algorithm.
+			LS-align program contains two modules: <i>Rigid-LS-align</i> for rigid-body ligand structure 
+			comparison; and <i>Flexi-LS-align</i> for flixible structure comparison. 
+			In particular, the <i>Flexi-LS-align</i> module seeks for optimal alignments of various alternative 
+			conformers of the ligand molecules by rotating flexible bond-angles, 
+			which allows the consideration of binding-induced conformational changes
+			in the ligand structural comparison and alignment.&nbsp; 
+		</font></td>
 	</tr>
-</table>
-<p>
-<div style="font-family:Times New Roman; font-size:15px">
-	<hr width=60% align=middle>
-	<center><h3>LS-align download</h3></center>
-	<ul>
-		<li>
-			Click <a href=LSalign_src.tar.gz>LSalign_src.tar.gz</a> to download the newest version of the source code of LS-align coded in C++. You can compile the program in your Linux computer by:
-			<br>
+	<tr>
+		<td valign="baseline" colspan="3">
+		<p align="justify" style="line-height: 150%; margin-top: 10px">
+		<font face="Georgia" size="2">Mr. Jun Hu received his B.S. degree in computer science from AnHui Normal University in 2011. From 2011, he is a Ph.D Student of School of Computer Science and Engineering in NanJing University of Science and Technology and a member of Pattern Recognition and Bioinformatics Group, led by professor Dong-Jun Yu. From 2016 to 2017, he acted as a visiting student at the University of Michigan (Ann Arbor) in U.S.A. </font></p>
+		<p align="justify"><font face="Georgia" size="2">[<a href="#Jun_Hu">Back</a>]</font></td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3" bgcolor="#C0C0C0">
+			<p><b>
+			<font face="Georgia" size="2">
+				<a name="Published Papers">Published Papers</a> (<a href="https://scholar.google.com/citations?user=DjP331sAAAAJ&hl=en" target=_blank>>> Google Scholar Citation Profile</a>)
+			</font>
+			</b></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3"><br/><font face="Georgia" size="2"><b><i>Journal Papers</i></b></font></td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3">
+		<ul>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Zi Liu, Dong-Jun Yu, and Yang Zhang. 
+			    <u>LS-align: an atom-level, flexible ligand structural alignment algorithm for high-throughput virtual screening</u> [J]. <b>Bioinformatics</b>, 2018 (In press).
+					[<a href="papers/LS-align.pdf" target=_blank>PDF</a>]
+					[<a href="https://doi.org/10.1093/bioinformatics/bty081" target=_blank>DOI</a>]
+					[<a href="https://zhanglab.ccmb.med.umich.edu/LS-align/" target=_blank>Web Server</a>]</font></li>
+		  <li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Yang Li, Yang Zhang, and Dong-Jun Yu. 
+			    <u>ATPbind: accurate protein-ATP binding site prediction by combining sequence-profiling and structure-based comparisons</u> [J]. <b>Journal of Chemical Information and Modeling</b>, 2018, 58: 501-510.
+					[<a href="papers/ATPbind.pdf" target=_blank>PDF</a>]
+					[<a href="https://zhanglab.ccmb.med.umich.edu/ATPbind/" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Yang Li, Ming Zhang, Xibei Yang, 
+			Hong-Bin Shen, and Dong-Jun Yu. <u>Predicting Protein-DNA Binding Residues by Weightedly Combining Sequence-based Features and Boosting Multiple SVMs</u> [J]. <b>IEEE/ACM Transactions on Computational Biology and Bioinformatics</b>, 2017, 14(6): 1389-1398.
+					[<a href="papers/TargetDNA.pdf" target=_blank>PDF</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetDNA" target=_blank>Web Server</a>]
+					[<a href="dataset/TargetDNA_dataset.rar" target=_blank>Dataset</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Ke Han, Yang Li, Jing-Yu Yang, 
+			Hong-Bin Shen, and Dong-Jun Yu. <u> TargetCrys: protein crystallization prediction by fusing multi-view features with two-layered SVM</u> [J]. <b>Amino Acids</b>, 2016, 48(11): 2533-2547. 
+					[<a href="papers/2016-Amino-Acids.pdf" target=_blank>PDF 1</a>][<a href="papers/TargetCrys.pdf" target=_blank>PDF 2</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetCrys" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Yang Li, Wu-Xia Yan, Jing-Yu Yang, 
+			Hong-Bin Shen, and Dong-Jun Yu. <u> KNN-based Dynamic Query-Driven Sample Rescaling 
+				Strategy for Class Imbalance Learning</u> [J]. <b>Neurocomputing</b>, 2016, 191: 363-373. 
+					[<a href="papers/TargetNUCs.pdf" target=_blank>PDF</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetNUCs" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Yang Li, Jing-Yu Yang, 
+			Hong-Bin Shen, and Dong-Jun Yu. <u>GPCR-drug Interactions Prediction 
+				Using Random Forest with Drug-Association-Matrix-Based Post-Processing 
+				Procedure</u> [J]. <b>Computational Biology and Chemistry</b>, 2016, 60: 59-71. 
+					[<a href="papers/2016-CBAC.pdf" target=_blank>PDF</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetGDrug" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Xue He, Ke Han, <b>Jun Hu</b>, Hui Yan, 
+			Jing-Yu Yang, Hong-Bin Shen, and Dong-Jun Yu. <u>TargetFreeze: 
+			Identifying Antifreeze Proteins via a Combination of Weights using 
+			Sequence Evolutionary Information and Pseudo Amino Acid Composition</u>.
+			<b>Journal of Membrane Biology</b>, 2015, 248(6): 1005-1014.
+					[<a href="papers/2015-JMBI.pdf" target=_blank>PDF</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetFreeze" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, <b>Jun Hu</b>, Qian-Mu 
+			Li, Zhen-Min Tang, Jing-Yu Yang, and Hong-Bin Shen. <u>Constructing 
+			Query-Driven Dynamic Machine Learning Model with Application to 
+			Protein-Ligand Binding Sites Prediction</u>. <b>IEEE Transactions on 
+			NanoBioscience</b>, 2015, 14(1): 45-58. 
+					[<a href="papers/OSML.pdf" target=_blank>PDF</a>]
+					[<a href="http://www.csbio.sjtu.edu.cn/bioinf/OSML" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, Yang Li, <b>Jun Hu</b>, Hong-Bin Shen, and Jing-Yu Yang.
+			<u>Disulfide Connectivity Prediction with Modelled Protein 3D Structural Information and Random Forest Regression</u>. 
+			<strong>IEEE/ACM Transactions on Computational Biology and Bioinformatics</strong>, 2015, 12(3): 611-621.
+					[<a href="papers/2015-TCBB.pdf" target=_blank>PDF</a>]
+					[<a href="http://csbio.njust.edu.cn/bioinf/TargetDisulfide" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2"><b>Jun Hu</b>, Xue He, Dong-Jun Yu*, 
+			Xi-Bei Yang, Jing-Yu Yang, and Hong-Bin Shen. <u>A New Supervised 
+			Over-Sampling Algorithm with Application to Protein-Nucleotide 
+			Binding Residues Prediction</u>. <b>PLOS ONE</b>, 2014, 9(9): e107676
+					[<a href="papers/2014-PLOS0NE.pdf" target=_blank>PDF</a>]
+					[<a href="http://www.csbio.sjtu.edu.cn/bioinf/TargetSOS" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, <b>Jun Hu</b>, Hui Yan, Hong-Bin Shen,
+             and Jing-Yu Yang. <u>Enhancing Protein-Vitamin Binding Residues Prediction 
+             by Multiple Heterogeneous Subspace SVMs Ensemble</u>. <strong>BMC Bioinformatics</strong>, 2014, 15:297.
+             [<a href="papers/TargetVita.pdf" target=_blank>PDF</a>]
+             [<a href="http://www.csbio.sjtu.edu.cn/bioinf/TargetVita" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 20px; margin-top: 10px" align="justify">
+			<font face="Georgia"><span style="font-size: 10pt">Dong-Jun Yu, <b>Jun Hu</b>, Jing 
+			Yang, Hong-Bin Shen, Jinhui Tang, and Jing-Yu Yang. <u>Designing template-free predictor for targeting protein-ligand 
+			binding sites with classifier ensemble and spatial clustering</u>.
+			<b>IEEE/ACM Transactions on Computational Biology and Bioinformatics</b>,&nbsp;</span></font><font size="2" face="Georgia">2013, 
+			10(4): 994-1008.
+						[<a href="papers/TargetS.pdf" target=_blank>PDF 1</a>]
+						[<a href="papers/TargetS-new.pdf" target=_blank>PDF 2</a>]
+						[<a href="http://www.csbio.sjtu.edu.cn/bioinf/TargetS" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 150%; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, <b>Jun Hu</b>, Xiaowei Wu, 
+			Hong-Bin Shen, Jun Chen, Zhenmin Tang, Jian Yang, and Jingyu Yang.
+			<u>Learning Protein Multi-View Features in Complex Space</u>, &nbsp;<b>Amino 
+			Acids</b>.
+			2013, 44(5): 1365-1379.[<a href="papers/COMSPA.pdf" target=_blank>PDF</a>][<a href="http://www.csbio.sjtu.edu.cn/bioinf/COMSPA" target=_blank>
+              Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 150%; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, <b>Jun Hu</b>, Yan Huang, 
+			Hong-Bin Shen, Yong Qi, Zhen-Min Tang and Jing-Yu Yang. <u>TargetATPsite: A Template-free Method for ATP Binding Sites 
+			Prediction with Residue Evolution Image Sparse Representation and 
+			Classifier Ensemble</u>.&nbsp;<b>Journal of Computational Chemistry</b>, 2013, 34: 974-985.&nbsp; 
+			(<b> Inside Cover Story</b>)
+						[<a href="papers/TargetATPsite.pdf" target=_blank>PDF</a>]
+						[<a href="http://www.csbio.sjtu.edu.cn/bioinf/TargetATPsite" target=_blank>Web Server</a>]</font></li>
+			<li>
+			<p style="line-height: 150%; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu, <b>Jun Hu</b>, Zhen-Min Tang, 
+			Hong-Bin Shen, Jian Yang, and Jing-Yu Yang. <u>Improving 
+	Protein-ATP Binding Residues Prediction by Boosting SVMs with Random 
+	Under-Sampling</u>. <b>Neurocomputing</b>, 2013, 104: 180-190.
+						[<a href="papers/nerocomputing-2013.pdf" target=_blank>PDF</a>]
+						[<a href="http://www.csbio.sjtu.edu.cn/bioinf/targetATP" target=_blank>Web Server</a>]</font></li>
+		</ul>
+		</td>
+	</tr>	
+	<tr>
+		<td width="1178" valign="baseline" colspan="3"><br/><font face="Georgia" size="2"><b><i>Conference Papers</i></b></font></td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3">
+		<ul>
+			
+			<li>
+			<p style="line-height: 150%; margin-top: 10px" align="justify">
+		<font face="Georgia" size="2"><b>Jun Hu</b>, Zi Liu, and Dong-Jun Yu*. <u>Enhancing Protein-ATP and Protein-ADP Binding Sites Prediction Using Supervised Instance-Transfer Learning</u>. <b>The 4th Asian Conference on Pattern Recognition (ACPR 2017)</b>. 2017: 759-763 
+						[<a href="papers/MS-ATPADPsite.pdf" target=_blank>PDF</a>]</font></li>
+			
+			<li>
+			<p style="line-height: 150%; margin-top: 10px" align="justify">
+			<font face="Georgia" size="2">Dong-Jun Yu,<b> Jun Hu,</b> Jian-Hua Xie, Yong Qi, and 
+	Zhen-Min Tang. <u>Supervised Kernel Self-Organizing Map</u>. <b>2012 
+	Sino-foreign-interchange Workshop on Intelligence Science and Intelligent 
+	Data Engineering (IScIDE 2012)</b>. Springer, Nanjing, LNCS 7751, pp. 
+	246--253. Springer, Heidelberg (2013). 
+						[<a href="papers/IScIDE-2012.pdf" target=_blank>PDF</a>]</font></li>
+		</ul>
+		<p><font face="Georgia" size="2">[<a href="#Jun_Hu">Back</a>]</font>
+		</td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3" bgcolor="#C0C0C0">
+			<p><b><font face="Georgia" size="2"><a name="Quick Links">Quick Links</a></font></b></p>
+		</td>
+	</tr>
+	<tr>
+		<td width="1178" valign="baseline" colspan="3">
 			<ul>
-				>tar zxvf LSalign_src.tar.gz<br />
-				>cd src<br />
-				>g++ LSalign.cpp -o LSalign <br />
-				or<br />
-				>g++ -static -O3 -ffast-math -lm -o LSalign LSalign.cpp
+				<li><a href="http://csbio.njust.edu.cn" target=_blank>D.J. YuLab</a></li>
+				<li><a href="https://zhanglab.ccmb.med.umich.edu/" target=_blank>Yang ZhangLab</a></li>
+				<li><a href="https://leeyang.github.io" target=_blank>Yang Li</a></li>
+				<li><a href="https://heyan-svm.github.io/" target=_blank>He Yan</a></li>
 			</ul>
-		</li>
-		<li>
-			Click <a href=LSalign.tar.gz>LSalign.tar.gz</a> to download the executable program for Linux and Windows systems. Nevetheless, it is strongly recommended to download the LS-align source code and compile it on your machine, which gives you higher speed to run the program.
-		</li>
-	</ul>
-
-	<p>
-	<hr width=20% align=left>
-	References:<br>
-	<ul>
-	
-	<li>
-
-Jun Hu, Zi Liu, Dongjun Yu, Yang Zhang
-LS-align: an atom-level, flexible ligand structural alignment algorithm for high-throughput virtual screening.
-Bioinformatics, in press (2018).
-(Download <a href="https://zhanglab.ccmb.med.umich.edu/papers/2018_1.pdf">download the PDF file</a> and
-<a href=https://zhanglab.ccmb.med.umich.edu/papers/2018_1_support.pdf>Support Information</a>)
-	</ul>
-	<p>
+			 
+			<p><font face="Georgia" size="2">[<a href="#Jun_Hu">Back</a>]</font>
+		</td>
+	</tr>
+	</table>
 </div>
 
-</div>
-<!--------end text ----------->
-
-<!-- ==CCC== ======beginning of tail==== -->
- </div></div> <!-- for closing all the opening tags. -->
-</div>
-<p>
-<p id="z_foot">
-<a href="mailto:yangzhanglab\@umich.edu">yangzhanglab<img src=http://zhanglab.ccmb.med.umich.edu/image/at.gif width=10 border=0>umich.edu</a>  
-|  (734) 647-1549 | 100 Washtenaw Avenue, Ann Arbor, MI 48109-2218
-</p>
-<br>
 </body>
-</html>
-<!-- ==DDD== =======ending of tail====== -->
-
-
-<script type="text/JavaScript">
-
-function lig1example()
-{
-	var STR=IO("lig1example.mol2");
-	document.form1.FirstMOL2.value = STR;
-}
-
-
-function lig2example()
-{
-	var STR=IO("lig2example.mol2");
-	document.form1.SecondMOL2.value = STR;
-}
-
-
-function IO(U, V) 
-{
-  var X = !window.XMLHttpRequest ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
-  X.open(V ? 'PUT' : 'GET', U, false );
-  X.setRequestHeader('Content-Type', 'text/html')
-  X.send(V ? V : '');
-	return X.responseText;
-}
-
-</script>
+</html> 
