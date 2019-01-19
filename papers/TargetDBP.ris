@@ -1,0 +1,27 @@
+TY  - JOUR
+TI  - TargetDBP: Accurate DNA-Binding Protein Prediction via Sequence-based Multi-View Feature Learning
+T2  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+SP  - 1
+EP  - 1
+AU  - J. Hu
+AU  - X. Zhou
+AU  - Y. Zhu
+AU  - D. Yu
+AU  - G. Zhang
+PY  - 2019
+KW  - DNA-binding protein prediction
+KW  - Sequence-based
+KW  - Differential evolution
+KW  - Feature selection
+KW  - Support vector machine
+DO  - 10.1109/TCBB.2019.2893634
+JO  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+IS  - 
+SN  - 1545-5963
+VO  - 
+VL  - 
+JA  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+Y1  - 
+ER  - 
+
+
