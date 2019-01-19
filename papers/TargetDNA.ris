@@ -1,0 +1,69 @@
+TY  - JOUR
+TI  - Predicting Protein-DNA Binding Residues by Weightedly Combining Sequence-Based Features and Boosting Multiple SVMs
+T2  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+SP  - 1389
+EP  - 1398
+AU  - J. Hu
+AU  - Y. Li
+AU  - M. Zhang
+AU  - X. Yang
+AU  - H. Shen
+AU  - D. Yu
+PY  - 2017
+KW  - biochemistry
+KW  - biology computing
+KW  - DNA
+KW  - genetic algorithms
+KW  - genomics
+KW  - molecular biophysics
+KW  - molecular configurations
+KW  - proteins
+KW  - support vector machines
+KW  - protein-DNA binding residues
+KW  - weightedly combining sequence-based features
+KW  - boosting multiple SVMs
+KW  - protein-DNA interactions
+KW  - biological processes
+KW  - protein function annotations
+KW  - drug discovery
+KW  - post-genomic era
+KW  - TargetDNA
+KW  - protein evolutionary information
+KW  - predicted solvent accessibility
+KW  - centered linear kernel alignment algorithm
+KW  - weightedly combined feature
+KW  - random under-sampling technique
+KW  - original dataset
+KW  - severe imbalance phenomenon
+KW  - final ensembled predictor
+KW  - multiple initially trained predictors
+KW  - sequence-based protein-DNA binding residue predictors
+KW  - Proteins
+KW  - Solvents
+KW  - Kernel
+KW  - Training
+KW  - Prediction algorithms
+KW  - DNA
+KW  - Learning systems
+KW  - Protein-DNA binding residues
+KW  - kernel alignment
+KW  - feature weighting
+KW  - classifier ensemble
+KW  - imbalance learning
+KW  - Amino Acid Sequence
+KW  - Computational Biology
+KW  - DNA-Binding Proteins
+KW  - Databases, Protein
+KW  - Models, Statistical
+KW  - Support Vector Machine
+DO  - 10.1109/TCBB.2016.2616469
+JO  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+IS  - 6
+SN  - 1545-5963
+VO  - 14
+VL  - 14
+JA  - IEEE/ACM Transactions on Computational Biology and Bioinformatics
+Y1  - 1 Nov.-Dec. 2017
+ER  - 
+
+
