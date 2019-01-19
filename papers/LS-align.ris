@@ -1,0 +1,18 @@
+TY  - JOUR
+T1  - LS-align: an atom-level, flexible ligand structural alignment algorithm for high-throughput virtual screening
+AU  - Hu, Jun
+AU  - Liu, Zi
+AU  - Yu, Dong-Jun
+AU  - Zhang, Yang
+Y1  - 2018/07/01
+N1  - 10.1093/bioinformatics/bty081
+JO  - Bioinformatics
+SP  - 2209
+EP  - 2218
+VL  - 34
+IS  - 13
+N2  - MotivationSequence-order independent structural comparison, also called structural alignment, of small ligand molecules is often needed for computer-aided virtual drug screening. Although many ligand structure alignment programs are proposed, most of them build the alignments based on rigid-body shape comparison which cannot provide atom-specific alignment information nor allow structural variation; both abilities are critical to efficient high-throughput virtual screening.ResultsWe propose a novel ligand comparison algorithm, LS-align, to generate fast and accurate atom-level structural alignments of ligand molecules, through an iterative heuristic search of the target function that combines inter-atom distance with mass and chemical bond comparisons. LS-align contains two modules of Rigid-LS-align and Flexi-LS-align, designed for rigid-body and flexible alignments, respectively, where a ligand-size independent, statistics-based scoring function is developed to evaluate the similarity of ligand molecules relative to random ligand pairs. Large-scale benchmark tests are performed on prioritizing chemical ligands of 102 protein targets involving 1 415 871 candidate compounds from the DUD-E (Database of Useful Decoys: Enhanced) database, where LS-align achieves an average enrichment factor (EF) of 22.0 at the 1% cutoff and the AUC score of 0.75, which are significantly higher than other state-of-the-art methods. Detailed data analyses show that the advanced performance is mainly attributed to the design of the target function that combines structural and chemical information to enhance the sensitivity of recognizing subtle difference of ligand molecules and the introduces of structural flexibility that help capture the conformational changes induced by the ligand–receptor binding interactions. These data demonstrate a new avenue to improve the virtual screening efficiency through the development of sensitive ligand structural alignments.Availability and implementationhttp://zhanglab.ccmb.med.umich.edu/LS-align/Supplementary informationSupplementary data are available at Bioinformatics online.
+SN  - 1367-4803
+M3  - doi: 10.1093/bioinformatics/bty081
+UR  - http://dx.doi.org/10.1093/bioinformatics/bty081
+ER  - 
