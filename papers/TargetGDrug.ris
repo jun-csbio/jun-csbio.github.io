@@ -1,0 +1,22 @@
+TY  - JOUR
+T1  - GPCR–drug interactions prediction using random forest with drug-association-matrix-based post-processing procedure
+AU  - Hu, Jun
+AU  - Li, Yang
+AU  - Yang, Jing-Yu
+AU  - Shen, Hong-Bin
+AU  - Yu, Dong-Jun
+JO  - Computational Biology and Chemistry
+VL  - 60
+SP  - 59
+EP  - 71
+PY  - 2016
+DA  - 2016/02/01/
+SN  - 1476-9271
+DO  - https://doi.org/10.1016/j.compbiolchem.2015.11.007
+UR  - http://www.sciencedirect.com/science/article/pii/S1476927115302425
+KW  - GPCR–drug interactions
+KW  - Random forest
+KW  - Drug association matrix
+KW  - Machine learning
+AB  - G-protein-coupled receptors (GPCRs) are important targets of modern medicinal drugs. The accurate identification of interactions between GPCRs and drugs is of significant importance for both protein function annotations and drug discovery. In this paper, a new sequence-based predictor called TargetGDrug is designed and implemented for predicting GPCR–drug interactions. In TargetGDrug, the evolutionary feature of GPCR sequence and the wavelet-based molecular fingerprint feature of drug are integrated to form the combined feature of a GPCR–drug pair; then, the combined feature is fed to a trained random forest (RF) classifier to perform initial prediction; finally, a novel drug-association-matrix-based post-processing procedure is applied to reduce potential false positive or false negative of the initial prediction. Experimental results on benchmark datasets demonstrate the efficacy of the proposed method, and an improvement of 15% in the Matthews correlation coefficient (MCC) was observed over independent validation tests when compared with the most recently released sequence-based GPCR–drug interactions predictor. The implemented webserver, together with the datasets used in this study, is freely available for academic use at http://csbio.njust.edu.cn/bioinf/TargetGDrug.
+ER  - 

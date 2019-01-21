@@ -1,0 +1,15 @@
+@article{doi:10.1021/acs.jcim.7b00397,
+author = {Hu, Jun and Li, Yang and Zhang, Yang and Yu, Dong-Jun},
+title = {ATPbind: Accurate Protein–ATP Binding Site Prediction by Combining Sequence-Profiling and Structure-Based Comparisons},
+journal = {Journal of Chemical Information and Modeling},
+volume = {58},
+number = {2},
+pages = {501-510},
+year = {2018},
+doi = {10.1021/acs.jcim.7b00397},
+note ={PMID: 29361215},
+URL = {https://doi.org/10.1021/acs.jcim.7b00397},
+eprint = {https://doi.org/10.1021/acs.jcim.7b00397}
+}
+
+

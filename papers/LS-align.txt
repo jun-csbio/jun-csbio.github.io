@@ -1,0 +1,12 @@
+@article{doi:10.1093/bioinformatics/bty081,
+author = {Hu, Jun and Liu, Zi and Yu, Dong-Jun and Zhang, Yang},
+title = {LS-align: an atom-level, flexible ligand structural alignment algorithm for high-throughput virtual screening},
+journal = {Bioinformatics},
+volume = {34},
+number = {13},
+pages = {2209-2218},
+year = {2018},
+doi = {10.1093/bioinformatics/bty081},
+URL = {http://dx.doi.org/10.1093/bioinformatics/bty081},
+eprint = {/oup/backfile/content_public/journal/bioinformatics/34/13/10.1093_bioinformatics_bty081/1/bty081.pdf}
+}

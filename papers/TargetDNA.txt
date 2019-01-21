@@ -1,0 +1,11 @@
+@ARTICLE{7588168, 
+author={J. Hu and Y. Li and M. Zhang and X. Yang and H. Shen and D. Yu}, 
+journal={IEEE/ACM Transactions on Computational Biology and Bioinformatics}, 
+title={Predicting Protein-DNA Binding Residues by Weightedly Combining Sequence-Based Features and Boosting Multiple SVMs}, 
+year={2017}, 
+volume={14}, 
+number={6}, 
+pages={1389-1398}, 
+doi={10.1109/TCBB.2016.2616469}, 
+ISSN={1545-5963}, 
+month={Nov},}

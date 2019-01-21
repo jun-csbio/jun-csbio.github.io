@@ -1,0 +1,12 @@
+@article{HU2016363,
+title = "KNN-based dynamic query-driven sample rescaling strategy for class imbalance learning",
+journal = "Neurocomputing",
+volume = "191",
+pages = "363 - 373",
+year = "2016",
+issn = "0925-2312",
+doi = "https://doi.org/10.1016/j.neucom.2016.01.043",
+url = "http://www.sciencedirect.com/science/article/pii/S0925231216001338",
+author = "Jun Hu and Yang Li and Wu-Xia Yan and Jing-Yu Yang and Hong-Bin Shen and Dong-Jun Yu",
+keywords = "Imbalanced learning, Sample rescaling, Dynamic query-driven sample rescaling, Classifier ensemble, Protein–nucleotide binding residues prediction",
+}

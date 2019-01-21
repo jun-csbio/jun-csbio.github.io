@@ -1,0 +1,20 @@
+@Article{Hu2016,
+author="Hu, Jun
+and Han, Ke
+and Li, Yang
+and Yang, Jing-Yu
+and Shen, Hong-Bin
+and Yu, Dong-Jun",
+title="TargetCrys: protein crystallization prediction by fusing multi-view features with two-layered SVM",
+journal="Amino Acids",
+year="2016",
+month="Nov",
+day="01",
+volume="48",
+number="11",
+pages="2533--2547",
+issn="1438-2199",
+doi="10.1007/s00726-016-2274-4",
+url="https://doi.org/10.1007/s00726-016-2274-4"
+}
+

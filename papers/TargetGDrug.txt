@@ -1,0 +1,12 @@
+@article{HU201659,
+title = "GPCR–drug interactions prediction using random forest with drug-association-matrix-based post-processing procedure",
+journal = "Computational Biology and Chemistry",
+volume = "60",
+pages = "59 - 71",
+year = "2016",
+issn = "1476-9271",
+doi = "https://doi.org/10.1016/j.compbiolchem.2015.11.007",
+url = "http://www.sciencedirect.com/science/article/pii/S1476927115302425",
+author = "Jun Hu and Yang Li and Jing-Yu Yang and Hong-Bin Shen and Dong-Jun Yu",
+keywords = "GPCR–drug interactions, Random forest, Drug association matrix, Machine learning",
+}

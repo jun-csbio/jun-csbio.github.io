@@ -1,0 +1,24 @@
+TY  - JOUR
+T1  - KNN-based dynamic query-driven sample rescaling strategy for class imbalance learning
+AU  - Hu, Jun
+AU  - Li, Yang
+AU  - Yan, Wu-Xia
+AU  - Yang, Jing-Yu
+AU  - Shen, Hong-Bin
+AU  - Yu, Dong-Jun
+JO  - Neurocomputing
+VL  - 191
+SP  - 363
+EP  - 373
+PY  - 2016
+DA  - 2016/05/26/
+SN  - 0925-2312
+DO  - https://doi.org/10.1016/j.neucom.2016.01.043
+UR  - http://www.sciencedirect.com/science/article/pii/S0925231216001338
+KW  - Imbalanced learning
+KW  - Sample rescaling
+KW  - Dynamic query-driven sample rescaling
+KW  - Classifier ensemble
+KW  - Protein–nucleotide binding residues prediction
+AB  - The class imbalance phenomenon is pervasive in bioinformatics prediction problems in which the number of majority samples is significantly larger than that of minority samples. Relieving the severity of class imbalance has been demonstrated to be a promising route for enhancing the prediction performance of a statistical machine learning-based predictor under an imbalanced learning scenario. In this study, we propose a novel dynamic query-driven sample rescaling (DQD-SR) strategy for addressing class imbalance. Unlike the traditional sample rescaling technique, which often yields a fixed balanced dataset, the proposed DQD-SR dynamically generates a query-driven balanced dataset based on KNN algorithm. A prediction model trained on a traditional sample rescaling (T-SR)-derived balanced dataset will partially learn the global knowledge buried in the original dataset, whereas a prediction model trained on DQD-SR will reflect the query-specific local knowledge between a query sample and its correlated neighbors in the original dataset. Thus, we developed an ensemble scheme to integrate the T-SR-based model and the DQD-SR-based model to further improve the overall prediction performance. To demonstrate the efficacy of the proposed method, we performed stringent cross-validation and independent validation tests on benchmark datasets concerning protein–nucleotide binding residues prediction, which is a typical imbalanced learning problem in bioinformatics. Computer experimental results show that the proposed method achieves high prediction performance and outperforms existing sequence-based protein–nucleotide binding residues predictors. We also implemented a predictor called TargetNUCs, which is freely available for academic use at http://csbio.njust.edu.cn/bioinf/TargetNUCs.
+ER  - 

@@ -1,0 +1,21 @@
+TY  - JOUR
+AU  - Hu, Jun
+AU  - Han, Ke
+AU  - Li, Yang
+AU  - Yang, Jing-Yu
+AU  - Shen, Hong-Bin
+AU  - Yu, Dong-Jun
+PY  - 2016
+DA  - 2016/11/01
+TI  - TargetCrys: protein crystallization prediction by fusing multi-view features with two-layered SVM
+JO  - Amino Acids
+SP  - 2533
+EP  - 2547
+VL  - 48
+IS  - 11
+AB  - The accurate prediction of whether a protein will crystallize plays a crucial role in improving the success rate of protein crystallization projects. A common critical problem in the development of machine-learning-based protein crystallization predictors is how to effectively utilize protein features extracted from different views. In this study, we aimed to improve the efficiency of fusing multi-view protein features by proposing a new two-layered SVM (2L-SVM) which switches the feature-level fusion problem to a decision-level fusion problem: the SVMs in the 1st layer of the 2L-SVM are trained on each of the multi-view feature sets; then, the outputs of the 1st layer SVMs, which are the “intermediate” decisions made based on the respective feature sets, are further ensembled by a 2nd layer SVM. Based on the proposed 2L-SVM, we implemented a sequence-based protein crystallization predictor called TargetCrys. Experimental results on several benchmark datasets demonstrated the efficacy of the proposed 2L-SVM for fusing multi-view features. We also compared TargetCrys with existing sequence-based protein crystallization predictors and demonstrated that the proposed TargetCrys outperformed most of the existing predictors and is competitive with the state-of-the-art predictors. The TargetCrys webserver and datasets used in this study are freely available for academic use at: http://csbio.njust.edu.cn/bioinf/TargetCrys.
+SN  - 1438-2199
+UR  - https://doi.org/10.1007/s00726-016-2274-4
+DO  - 10.1007/s00726-016-2274-4
+ID  - Hu2016
+ER  - 
