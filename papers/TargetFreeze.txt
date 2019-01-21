@@ -1,0 +1,21 @@
+@Article{He2015,
+author="He, Xue
+and Han, Ke
+and Hu, Jun
+and Yan, Hui
+and Yang, Jing-Yu
+and Shen, Hong-Bin
+and Yu, Dong-Jun",
+title="TargetFreeze: Identifying Antifreeze Proteins via a Combination of Weights using Sequence Evolutionary Information and Pseudo Amino Acid Composition",
+journal="The Journal of Membrane Biology",
+year="2015",
+month="Dec",
+day="01",
+volume="248",
+number="6",
+pages="1005--1014",
+issn="1432-1424",
+doi="10.1007/s00232-015-9811-z",
+url="https://doi.org/10.1007/s00232-015-9811-z"
+}
+

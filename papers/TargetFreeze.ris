@@ -1,0 +1,22 @@
+TY  - JOUR
+AU  - He, Xue
+AU  - Han, Ke
+AU  - Hu, Jun
+AU  - Yan, Hui
+AU  - Yang, Jing-Yu
+AU  - Shen, Hong-Bin
+AU  - Yu, Dong-Jun
+PY  - 2015
+DA  - 2015/12/01
+TI  - TargetFreeze: Identifying Antifreeze Proteins via a Combination of Weights using Sequence Evolutionary Information and Pseudo Amino Acid Composition
+JO  - The Journal of Membrane Biology
+SP  - 1005
+EP  - 1014
+VL  - 248
+IS  - 6
+AB  - Antifreeze proteins (AFPs) are indispensable for living organisms to survive in an extremely cold environment and have a variety of potential biotechnological applications. The accurate prediction of antifreeze proteins has become an important issue and is urgently needed. Although considerable progress has been made, AFP prediction is still a challenging problem due to the diversity of species. In this study, we proposed a new sequence-based AFP predictor, called TargetFreeze. TargetFreeze utilizes an enhanced feature representation method that weightedly combines multiple protein features and takes the powerful support vector machine as the prediction engine. Computer experiments on benchmark datasets demonstrate the superiority of the proposed TargetFreeze over most recently released AFP predictors. We also implemented a user-friendly web server, which is openly accessible for academic use and is available at http://csbio.njust.edu.cn/bioinf/TargetFreeze. TargetFreeze supplements existing AFP predictors and will have potential applications in AFP-related biotechnology fields.
+SN  - 1432-1424
+UR  - https://doi.org/10.1007/s00232-015-9811-z
+DO  - 10.1007/s00232-015-9811-z
+ID  - He2015
+ER  - 
