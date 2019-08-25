@@ -1,0 +1,16 @@
+%0 Journal Article
+%A Zhou, Xiaogen
+%A Hu, Jun
+%A Zhang, Chengxin
+%A Zhang, Guijun
+%A Zhang, Yang
+%T Assembling multidomain protein structures through analogous global structural alignments
+%D 2019
+%R 10.1073/pnas.1905068116
+%J Proceedings of the National Academy of Sciences
+%P 15930-15938
+%V 116
+%N 32
+%X More than 80% of eukaryotic proteins and 67% of prokaryotic proteins contain multiple domains. Due to the technical difficulties in structural biology, however, 65.3% of solved proteins in the Protein Data Bank contain only single-domain structures. Similarly, most computational approaches are optimized for single-domain structure predictions. We propose a pipeline for assembling domain models into full-length structures with interdomain orientations constrained by an analogous structure alignment search. Large-scale benchmark tests showed an unprecedented ability of DEMO in modeling multidomain structures, with a success rate significantly beyond that of the state-of-the-art approaches built on linker modeling. This development helps bridge the significant gap between the increasingly improved ability of individual domain structure determination and the extremely high demands of community for multidomain structure models.Most proteins exist with multiple domains in cells for cooperative functionality. However, structural biology and protein folding methods are often optimized for single-domain structures, resulting in a rapidly growing gap between the improved capability for tertiary structure determination and high demand for multidomain structure models. We have developed a pipeline, termed DEMO, for constructing multidomain protein structures by docking-based domain assembly simulations, with interdomain orientations determined by the distance profiles from analogous templates as detected through domain-level structure alignments. The pipeline was tested on a comprehensive benchmark set of 356 proteins consisting of 2–7 continuous and discontinuous domains, for which DEMO generated models with correct global fold (TM-score &gt; 0.5) for 86% of cases with continuous domains and for 100% of cases with discontinuous domain structures, starting from randomly oriented target-domain structures. DEMO was also applied to reassemble multidomain targets in the CASP12 and CASP13 experiments using domain structures excised from the top server predictions, where the full-length DEMO models showed a significantly improved quality over the original server models. Finally, sparse restraints of mass spectrometry-generated cross-linking data and cryo-EM density maps are incorporated into DEMO, resulting in improvements in the average TM-score by 6.3% and 12.5%, respectively. The results demonstrate an efficient approach to assembling multidomain structures, which can be easily used for automated, genome-scale multidomain protein structure assembly.
+%U https://www.pnas.org/content/pnas/116/32/15930.full.pdf
+
