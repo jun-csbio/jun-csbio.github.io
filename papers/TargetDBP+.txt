@@ -1,0 +1,23 @@
+@article{doi:10.1021/acs.jcim.0c00735,
+author = {Hu, Jun and Rao, Liang and Zhu, Yi-Heng and Zhang, Gui-Jun and Yu, Dong-Jun},
+title = {TargetDBP+: Enhancing the Performance of Identifying DNA-Binding Proteins via Weighted Convolutional Features},
+journal = {Journal of Chemical Information and Modeling},
+volume = {61},
+number = {1},
+pages = {505-515},
+year = {2021},
+doi = {10.1021/acs.jcim.0c00735},
+    note ={PMID: 33410688},
+
+URL = { 
+        https://doi.org/10.1021/acs.jcim.0c00735
+    
+},
+eprint = { 
+        https://doi.org/10.1021/acs.jcim.0c00735
+    
+}
+
+}
+
+
